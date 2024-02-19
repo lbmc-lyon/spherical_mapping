@@ -1,4 +1,4 @@
-import spheric_mapping
+import spherical_mapping
 import numpy as np
 import pyvista as pv
 import matplotlib.pyplot as plt
