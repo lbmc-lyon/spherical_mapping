@@ -1,4 +1,4 @@
-# Spheric mapping
+# Spherical mapping
 
 <img title="" src=".\res\illu_main.png" alt="" data-align="center">
 
