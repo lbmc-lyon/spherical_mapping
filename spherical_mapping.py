@@ -105,7 +105,7 @@ def ref_point(center_coord : Iterable, impact_coord : Iterable, node_coords : It
     node_coords_ = np.array(node_coords) - np.array(center_coord)
     impact_coords_ = np.array(impact_coord) - np.array(center_coord)
     impact_coords_spher = cart2spher(impact_coords_)
-    r = Rotation.from_euler('ZYX', (impact_coords_spher[2], impact_coords_spher[1], 0), degrees=True)
+    r = Rotation.from_euler('ZYX', (impact_coords_spher[2], -impact_coords_spher[1], 0), degrees=True)
     node_coords_ = r.apply(node_coords_, inverse=True)
     return node_coords_
 
