@@ -1,4 +1,4 @@
-import spheric_mapping
+import spherical_mapping
 import numpy as np
 import pyvista as pv
 import matplotlib.pyplot as plt
@@ -10,12 +10,12 @@ theta = np.linspace(-85, 85, 100)
 coords = np.meshgrid(theta, phi)  # Mesh of theta and phi angle (spherical coords)
 rho = (np.sin(coords[0].flatten() * np.pi/180) - np.cos(coords[1].flatten() * np.pi/180))**2 + 2  # Distance from orig.
 coords = np.transpose((rho, coords[0].flatten(), coords[1].flatten()))  # Coords in spherical coordinates
-coords = spheric_mapping.spher2cart(coords)  # Coords in cartesian coordinates
+coords = spherical_mapping.spher2cart(coords)  # Coords in cartesian coordinates
 
 # Generate the map from cartesian coordinate and distance from origin as value to be mapped.
 angle_step = 1
 half_window = 5
-theta_angles, phi_angles, mean_vals = spheric_mapping.to_2d_map(coords, rho,
+theta_angles, phi_angles, mean_vals = spherical_mapping.to_2d_map(coords, rho,
                                                                 angle_step=angle_step, half_window=half_window)
 
 
