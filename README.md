@@ -8,4 +8,4 @@ Maps 3D coordinates and associated values to a 2D plane (like Mercator projectio
 
 Use test.py for a quickstart. Need to install package pyvista for 3D vizualization.
 
-
+Credits of spherical_mapping to Marc Gardegaront (https://github.com/MarcG-LBMC-Lyos)
